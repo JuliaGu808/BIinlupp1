@@ -13,6 +13,9 @@
   }
 }
 
+a, a:active {
+  color:#1d1d1d;
+}
 
 
 .App-header {

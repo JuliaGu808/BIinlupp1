@@ -21,7 +21,7 @@ namespace FunctionApp1
                 databaseName:"COSMOSdb1",
                 collectionName:"ESP2dht",
                 ConnectionStringSetting ="CosmosDb",
-                SqlQuery ="SELECT * FROM c ORDER BY c.ts DESC OFFSET 0 LIMIT 10"
+                SqlQuery ="SELECT * FROM c WHERE c.deviceId = 'esp2' ORDER BY c.ts DESC OFFSET 0 LIMIT 10"
             )]IEnumerable<dynamic> cosmos,
             ILogger log)
         {

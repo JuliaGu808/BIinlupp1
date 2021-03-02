@@ -25,5 +25,5 @@ class draw:
         plt.title('DHT diagram')
         plt.ylabel('Value')
         plt.xlabel('Time')
-        plt.savefig('../frontpage/src/mytable.png')
+        plt.savefig('../../frontpage/src/mytable.png')
         plt.close()

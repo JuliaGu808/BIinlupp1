@@ -5,13 +5,12 @@ function Table (){
     const [tableBody, setTableBody] = useState([])
 
     useEffect(() => {
-        console.log("first")
         const bastURL = "https://juliafunctiondemo1.azurewebsites.net/api/GetAllFromCosmosDb?"
         getTableData(bastURL)
       }, []);
 
     function getTableData(url){
-        //url = "/"
+        url = "/"
         axios.get(url)
         .then(res=>{
             let lists={}
@@ -25,7 +24,6 @@ function Table (){
                date_time = date_time.substring(0, date_time_index)
                date_time_index = date_time.indexOf("-")
                date_time = date_time.substring(date_time_index+1)
-               //date_time = date_time.replaceAll(":", "")
                 tmp.unshift(el.temperature) // add first
                 hum.unshift(el.humidity)
                 ts.unshift(date_time)
