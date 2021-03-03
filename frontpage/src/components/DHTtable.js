@@ -10,7 +10,7 @@ function Table (){
       }, []);
 
     function getTableData(url){
-        url = "/"
+       // url = "/"
         axios.get(url)
         .then(res=>{
             let lists={}
