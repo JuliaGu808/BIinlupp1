@@ -11,6 +11,7 @@ bool checkDiff() {
 }
 
 void sendSonic() {
+  
   long duration, distance;
   digitalWrite(trigPin, LOW);
   delayMicroseconds(2);
@@ -19,7 +20,6 @@ void sendSonic() {
   digitalWrite(trigPin, LOW);
   duration = pulseIn(echoPin, HIGH);
   distance = (duration / 2) / 29.1;
-
   current_distance = map(distance, 0, 1000, 0, 1000);
   if ((currentMillis - PREV_SONIC_MILLIS) > SONIC_INTERVAL
       && !messagePending && checkDiff())
@@ -37,7 +37,7 @@ void sendSonic() {
     doc["name"] = NAME;
     doc["ts"] = epochTime;
     serializeJson(doc, payload);
-
+Serial.println("send sonic 2");
     sentAzureIothub(payload);
 
   }

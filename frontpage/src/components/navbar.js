@@ -4,7 +4,8 @@ function Navbar(){
   const [home, setHome] = useState(false)
   const [table, setTable] = useState(false);
   const [dht, setDht] = useState(false);
-  const [distance, setDistance] = useState(false)
+  const [distance, setDistance] = useState(false);
+  const [storageTable, setStorageTable] = useState(false)
   
   useEffect(() => {
     const current_url = window.location.href
@@ -22,6 +23,9 @@ function Navbar(){
         break
       case "distance_diagram":
         setDistance(true)
+        break
+      case "storage":
+        setStorageTable(true)
         break
       default:
         break
@@ -45,6 +49,9 @@ function Navbar(){
         </li>
         <li className="nav-item">
           <a style={{textDecoration:`${distance&&"underline"}`}} className="nav-link" href="/distance_diagram">Distance Diagram</a>
+        </li>
+        <li className="nav-item">
+          <a style={{textDecoration:`${storageTable&&"underline"}`}} className="nav-link" href="/storage">Storage Table</a>
         </li>
         
       </ul>
