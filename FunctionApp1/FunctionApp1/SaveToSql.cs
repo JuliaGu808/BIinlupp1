@@ -24,9 +24,6 @@ namespace FunctionApp1
 
             var msg = JsonConvert.DeserializeObject<Messages>(Encoding.UTF8.GetString(message.Body.Array));
 
-            //log.LogInformation($"deviceId:{msg.deviceId} name:{msg.name} school:{msg.school} type:{msg.type} " +
-            //    $"ts:{msg.ts} temperature:{msg.temperature} humidity:{msg.humidity} data:{msg.data}");
-
             var _connectionString = Environment.GetEnvironmentVariable("SqlConnection");
 
             using (SqlConnection conn = new SqlConnection(_connectionString))

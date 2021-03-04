@@ -6,6 +6,7 @@ import Table from './components/DHTtable'
 import DHTDiagram from './components/DHTdiagram'
 import Footer from './components/footer'
 import DistanceDiagram from './components/DistanceDiagram'
+import TableStorage from './components/TableStorage'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="/table" render={() => <Table />} />
             <Route path="/dht_diagram" render={() => <DHTDiagram />} />
             <Route path="/distance_diagram" render={() => <DistanceDiagram />} />
+            <Route path="/storage" render={() => <TableStorage />} />
             </Switch>
             <Footer />
             
