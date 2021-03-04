@@ -1,5 +1,7 @@
 # BI inlämnings uppgift
 
+Kolla main branch
+
 FunctionApp1 passar för båda G och VG ninå
 
 Frontpage kan köras av båda G och VG nivå
